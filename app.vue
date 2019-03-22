@@ -5,7 +5,7 @@
 export default {
     data(){
         return{
-            name:'11vue.js'
+            name:'vue.js'
         }
     }
 }
