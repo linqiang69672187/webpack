@@ -12,12 +12,13 @@ module.exports = merge(webpackBaseConfig,{
     output:{
         publicPath:'/dist/',
         //将入口文件重命名为带有20位的hash值的唯一文件
-        filename:'[name].[hash].js'
+        filename:'[name].js',
+        chunkFilename:'[name].chunk.js'
     },
     plugins:[
         new ExtractTextPlugin({
             //提取CSS，并重命名为带有20位的hash值的唯一文件
-            filename:'[name].[hash].css',
+            filename:'[name].css',
             allChunks:true
         }),
         //定义当前NODE环境为生产环境
